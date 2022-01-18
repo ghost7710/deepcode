@@ -1,0 +1,35 @@
+<!doctype html><!--HTML5.0-->
+
+<!--根-->
+<html>
+
+<!--头-->
+    <head>
+        <title>表格单元格合并</title>
+    </head>
+
+    <!--体-->
+    <body>
+         <!--
+        <table border="1px" width="300px">-->
+            <table align="center" border="1px" width="50%" heigth="150px">
+             
+                <!--align对齐方式-->
+            <tr align="center">
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+            </tr>
+            <tr>
+                <td colspan="2">d</td>
+                <!--注意事项：row合并一般删除下面的
+                col合并删除没要求-->
+                <td rowspan="2">fi</td>
+            </tr>
+            <tr>
+                <td>g</td>
+                <td>h</td>
+            </tr>
+        </table>
+    </body>
+</html>
