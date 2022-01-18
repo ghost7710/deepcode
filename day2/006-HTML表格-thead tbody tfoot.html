@@ -1,0 +1,45 @@
+<!doctype html><!--HTML5.0-->
+
+<!--根-->
+<html>
+
+<!--头-->
+    <thead>
+        <title>thead tbody tfoot 在table中不是必须的，便于js操作</title>
+    </thead>
+
+    <!--体-->
+    <tbody>
+         <!--
+        <table border="1px" width="300px">-->
+            <table align="center" border="1px" width="50%" heigth="150px">
+             
+                <!--align对齐方式-->
+            <tr>
+                <!--th标签也是单元格标签，比td多了居中和加粗-->
+                <th>员工编号</th>
+                <th>员工薪资</th>
+                <th>部门名称</th>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+            </tr>
+            <tr>
+                <td colspan="2">d</td>
+                <!--注意事项：row合并一般删除下面的
+                col合并删除没要求-->
+                <td rowspan="2">fi</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>g</td>
+                <td>h</td>
+            </tr>
+        </tfoot>
+            
+        </table>
+   
+</html>
