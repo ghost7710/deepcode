@@ -1,0 +1,65 @@
+<!doctype html><!--HTML5.0-->
+
+<html>
+
+    <head>
+        <title>表单form</title>
+    </head>
+
+    <body>
+        <!--
+            表格是以http://lacalhost:8080/steam/save?username=111&suerpwd=111这个格式提交给服务器的
+            格式:action?name=value&name=value&name=value.....
+            HTTP协议规定的
+
+            表单写了name属性就会提交给服务器，不提交则不写name
+        -->
+       <!--
+           1.表单有什么用？
+           收集用户信息，表单展现之后，用户填写表单，点击提交后提交数据给服务器
+           2.用form画表单
+           3.一个网页中可以有多个表单form
+           4.表单最终是需要提交数据给服务器的 ,action属性用来指定服务器地址，指定提交给哪个服务器
+           action和href一样可以向服务器发送请求
+           5.http://192.168.111.3:8080/oa/save这是请求路径，表单最终提交给：192.168.111.3机器上的8080端口对应的软件
+       -->
+       <form action="http://192.168.111.3:8080/oa/save">
+           <!--画一个提交按钮，这个按钮可以提交表单-->
+           <!--画按钮可以使用input输入域，type="submit"的时候表示该按钮是一个提交按钮，具有提前表单的能力-->
+            <input type="submit" value="登录"/>
+           <!--这是一个普通按钮-->
+           <input type="button" value="设置按钮显示的文本">
+            </form>
+            <!--表单发送请求的时候可以携带数据-->
+           <form action="http://www.baidu.com">
+               <input type="text"/>
+               <input type="submit" value="百度"/>
+            </form>
+            <form action="http://lacalhost:8080/steam/save">
+                用户名<input type="text/">
+                密码<input type="password"/>
+                <input type="submit" value="登录"/>
+            </form>
+            <form action="http://lacalhost:8080/steam/save">
+            <table border=1px>
+                <tr>
+                    <td>用户名</td>
+                    <!--有name才会提交-->
+                    <td><input type="text" name="username"/></td>
+                </tr>
+                <tr>
+                    <td>密码</td>
+                    <td><input type="password" name="suerpwd"/></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2"> 
+                        <!--必须放到form标签里-->
+                        <input type="submit" value="登录"/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="reset" value="清空"/>
+                    </td>
+                </tr>
+            </table>
+            </form> 
+    </body>
+</html>
